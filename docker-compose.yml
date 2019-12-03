@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  web-prod:
+    container_name: web-prod
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '80:80'
+    environment:
+      - NODE_ENV=production

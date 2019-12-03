@@ -8,7 +8,15 @@
     "react-scripts": "3.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "CHOKIDAR_USEPOLLING=true react-scripts start",
+    "dev:up": "docker-compose -f docker-compose.dev.yml up",
+    "dev:build": "docker-compose -f docker-compose.dev.yml build",
+    "dev:build-run": "docker-compose -f docker-compose.dev.yml up -d --build",
+    "dev:down": "docker-compose -f docker-compose.dev.yml down",
+    "prod:up": "docker-compose up",
+    "prod:build": "docker-compose build",
+    "prod:build-run": "docker-compose up -d --build",
+    "prod:down": "docker-compose down",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
