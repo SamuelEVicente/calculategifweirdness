@@ -1,0 +1,12 @@
+.result_page h4 {
+  text-align: center;
+}
+
+.result_page_start_over {
+  text-align: center;
+}
+
+.result_page button {
+  background-color: #999;
+  color: #fff;
+}

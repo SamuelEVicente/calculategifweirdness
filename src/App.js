@@ -7,6 +7,7 @@ import {
 import './App.css';
 import Header from './components/Header';
 import Main from './pages/Main'
+import Results from './pages/Results';
 function App() {
   return (
     <Router>
@@ -14,6 +15,9 @@ function App() {
       <Switch>
         <Route exact path='/'>
           <Main />
+        </Route>
+        <Route exact path='/results'>
+          <Results />
         </Route>
       </Switch>
     </Router>

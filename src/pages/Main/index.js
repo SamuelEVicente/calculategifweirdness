@@ -32,7 +32,7 @@ class Main extends PureComponent {
 
   onWeirdValueChange = async (e) => {
     this.props.actions.isLoading(true)
-    await this.props.actions.onWeirdValueChange(e.currentTarget.value)
+    await this.props.actions.onWeirdValueChange(parseInt(e.currentTarget.value))
     await this.searchTerm()
   }
 
