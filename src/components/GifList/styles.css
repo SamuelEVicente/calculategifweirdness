@@ -1,0 +1,20 @@
+.gif_list ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gif_list li {
+  margin: 20px;
+  flex: 0 1 250px;
+}
+
+.gif_list li h5 {
+  text-align: center;
+  overflow: hidden;
+}
+
+.gif_list_weirdness {
+  text-align: center;
+}
