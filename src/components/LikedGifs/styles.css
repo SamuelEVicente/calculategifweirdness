@@ -1,0 +1,14 @@
+.liked_gifs {
+  height: 100%;
+  background-color: #fafafa;
+  border: 1px solid #eee;
+}
+
+.liked_gifs p {
+  text-align: center;
+  padding: 15px;
+}
+
+.liked_gifs_weirdness_button {
+  text-align: center;
+}
