@@ -4,7 +4,7 @@ import { findByTestAtrr } from '../../utils/testUtils';
 import Gif from './index';
 
 const setUp = (props = {
-  onUnlikeGif: function () {},
+  onUnlikeGif: function () { },
   gif: {
     title: 'Test',
     url: 'Test.Url'
@@ -36,7 +36,13 @@ describe('Gif Component', () => {
   });
 
   it('Should not render Unlike button', () => {
-    const gifUnlike = findByTestAtrr(component, 'Gif-Unlike');
+    const component2 = setUp({
+      gif: {
+        title: 'Test',
+        url: 'Test.Url'
+      }
+    })
+    const gifUnlike = findByTestAtrr(component2, 'Gif-Unlike');
     expect(gifUnlike.length).toBe(0);
   })
 });

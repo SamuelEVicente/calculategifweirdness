@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import './styles.css'
 
 const Gif = (props) => {
-  const unLikeable = props.onUnlikeGif ? <Button data-attr={props.gif.searchTerm} data-test="Gif-Unlike" id={props.gif.searchTerm} onClick={e => props.onUnlikeGif(e)}><AiFillDislike /> </Button> : null;
+  const unLikeable = props.onUnlikeGif ? <Button data-test="Gif-Unlike" id={props.gif.searchTerm} onClick={e => props.onUnlikeGif(e)}><AiFillDislike /> </Button> : null;
   return (
     <section data-test="Gif" className="gif">
       <h5 data-test="Gif-Title">{props.gif.title}</h5>
