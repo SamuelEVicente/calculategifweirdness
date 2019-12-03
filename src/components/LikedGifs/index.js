@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import GifList from '../../components/GifList';
+import './styles.css'
 export default function LikedGifs({ likedGifs, onUnlike }) {
   const likeGifsLength = likedGifs.length;
   const helperText = 5 - likeGifsLength > 0 ? `You must like ${5 - likeGifsLength} more gif(s) to calculate your score` : "";
