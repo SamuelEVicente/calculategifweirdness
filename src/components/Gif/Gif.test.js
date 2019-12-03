@@ -4,7 +4,7 @@ import { findByTestAtrr } from '../../utils/testUtils';
 import Gif from './index';
 
 const setUp = (props = {
-  onUnlikeGif: false,
+  onUnlikeGif: function () {},
   gif: {
     title: 'Test',
     url: 'Test.Url'
