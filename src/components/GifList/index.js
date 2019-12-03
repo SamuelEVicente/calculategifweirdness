@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Gif from '../Gif';
+import './styles.css'
 
 const GifList = (props) => {
   const gifs = () => {
