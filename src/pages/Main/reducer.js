@@ -47,7 +47,8 @@ export default (state = initialState, { type, payload }) => {
     case UNLIKE_GIF:
       return {
         ...state,
-        likedGifs: payload
+        likedGifs: payload.likedGifs,
+        likedSearchTerms: payload.likedSearchTerms
       }
     default:
       return state
