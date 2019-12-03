@@ -2,7 +2,7 @@ import React from 'react'
 import { Spinner } from 'reactstrap';
 import { AiFillLike } from 'react-icons/ai';
 import Gif from '../../components/Gif';
-import { isEmpty } from '../../utils';
+import { isEmpty } from '../../utils/appUtils';
 import { Tooltip } from 'reactstrap';
 import PropTypes from 'prop-types';
 
