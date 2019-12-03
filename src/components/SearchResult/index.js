@@ -5,6 +5,7 @@ import Gif from '../../components/Gif';
 import { isEmpty } from '../../utils/appUtils';
 import { Tooltip } from 'reactstrap';
 import PropTypes from 'prop-types';
+import './styles.css'
 
 export default function SearchResult({ currentGif, weirdValue, onWeirdValueChange, loading, onLike, count }) {
   const renderResultOrError = () => {

@@ -1,0 +1,48 @@
+.search_result {
+  background-color: #fafafa;
+  border: 1px solid #eee;
+}
+
+.search_result input {
+  display: block;
+}
+
+.search_result_image {
+  text-align: center;
+}
+
+.search_result_image h5 {
+  text-align: center;
+}
+
+.search_result_image img {
+  text-align: center;
+}
+
+.search_result_image_wrapper {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  border: 1px solid #eee;
+  font-style: italic;
+  text-align: center;
+}
+
+.search_result_image_wrapper p {
+  padding: 0px 10px 0px 10px;
+}
+
+.search_result_image_wrapper .Gif {
+  padding: 0px;
+}
+
+.search_result_like_gif {
+  width: 100px;
+  margin: 20px auto;
+}
+
+.search_result_weirdness input {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}

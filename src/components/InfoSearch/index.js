@@ -2,6 +2,7 @@ import React from 'react';
 import { Jumbotron } from 'reactstrap';
 import InputWithButton from '../../components/Input';
 import PropTypes from 'prop-types';
+import './styles.css'
 
 export default function InfoSearch({ searchValue, onChange, search, toolTipOpen }) {
   return (
