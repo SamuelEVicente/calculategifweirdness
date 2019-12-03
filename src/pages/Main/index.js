@@ -33,9 +33,9 @@ class Main extends PureComponent {
 
 const mapStateToProps = (state) => {
   return {
-    searchValue: state.HomeReducer.searchValue,
-    weirdValue: state.HomeReducer.weirdValue,
-    toolTipOpen: state.HomeReducer.toolTipOpen
+    searchValue: state.MainReducer.searchValue,
+    weirdValue: state.MainReducer.weirdValue,
+    toolTipOpen: state.MainReducer.toolTipOpen
   }
 }
 
