@@ -6,6 +6,7 @@ import { bindActionCreators } from 'redux';
 import InfoSearch from '../../components/InfoSearch';
 import SearchResult from '../../components/SearchResult';
 import LikedGifs from '../../components/LikedGifs';
+import { Alert } from 'reactstrap';
 class Main extends PureComponent {
   onLike = async () => {
     if (new Set(this.props.likedSearchTerms).has(this.props.searchValue.toLowerCase())) {
@@ -13,6 +14,7 @@ class Main extends PureComponent {
         this.props.actions.dupLikeError(false)
       }, 7000)
       this.resetSearchFields()
+      this.props.actions.openToolTip(true)
       return this.props.actions.dupLikeError(true)
     }
     await this.props.actions.addToLikedGifs({
@@ -64,6 +66,9 @@ class Main extends PureComponent {
   render() {
     return (
       <>
+        <Alert color="danger" isOpen={this.props.dupLikeError}>
+          Only one liked gif allowed per search term, Please search a new term
+        </Alert>
         <div className="App">
           <Col xs="6">
             <InfoSearch search={this.searchTerm} onChange={this.onSearchChange} searchValue={this.props.searchValue} toolTipOpen={this.props.toolTipOpen} />
@@ -86,7 +91,8 @@ const mapStateToProps = (state) => {
     currentGif: state.MainReducer.currentGif,
     loading: state.MainReducer.loading,
     toolTipOpen: state.MainReducer.toolTipOpen,
-    likedSearchTerms: state.MainReducer.likedSearchTerms
+    likedSearchTerms: state.MainReducer.likedSearchTerms,
+    dupLikeError: state.MainReducer.dupLikeError,
   }
 }
 
