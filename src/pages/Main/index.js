@@ -31,6 +31,7 @@ class Main extends PureComponent {
   }
 
   onWeirdValueChange = async (e) => {
+    this.props.actions.resetResult({})
     this.props.actions.isLoading(true)
     await this.props.actions.onWeirdValueChange(parseInt(e.currentTarget.value))
     await this.searchTerm()
@@ -38,7 +39,9 @@ class Main extends PureComponent {
 
 
   searchTerm = async () => {
-    await this.props.actions.isLoading(true)
+    if (!this.props.isLoading) {
+      await this.props.actions.isLoading(true)
+    }
     await this.props.actions.apiRequest(this.props.searchValue, this.props.weirdValue)
     await this.props.actions.isLoading(false)
   }

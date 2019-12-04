@@ -9,7 +9,7 @@ import './styles.css'
 
 export default function SearchResult({ currentGif, weirdValue, onWeirdValueChange, loading, onLike, count }) {
   const renderResultOrError = () => {
-    if (isEmpty(currentGif)) {
+    if (isEmpty(currentGif) && !loading) {
       return <p>No results found for search term entered. Please try another search term</p>
     } else if (currentGif.meta && currentGif.meta.status === 200) {
       return (
